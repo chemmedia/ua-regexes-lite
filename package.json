@@ -1,6 +1,5 @@
 {
   "name": "ua-regexes-lite",
-  "type": "module",
   "version": "1.1.2",
   "description": "A lite useragent regexes collection.",
   "author": "dangreen",
@@ -21,10 +20,7 @@
     "node": ">=14"
   },
   "types": "./index.d.ts",
-  "exports": {
-    "import": "./index.js",
-    "types": "./index.d.ts"
-  },
+  "main": "./index.js",
   "publishConfig": {
     "directory": "package"
   },

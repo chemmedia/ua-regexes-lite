@@ -3,7 +3,7 @@
  */
 
 /** @type {UserAgentRegex[]} */
-export const regexes = [
+const regexes = [
   /**
    * IE can be in Compatability Mode (IE 7.0)
    * so we need to check Trident version
@@ -254,3 +254,7 @@ export const regexes = [
     family: 'kaios'
   }
 ]
+
+module.exports = {
+  regexes
+}
