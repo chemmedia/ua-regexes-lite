@@ -1,8 +1,13 @@
 # ua-regexes-lite
 
+[![ESM-only package][package]][package-url]
 [![NPM version][npm]][npm-url]
 [![Node version][node]][node-url]
+[![Install size][size]][size-url]
 [![Build status][build]][build-url]
+
+[package]: https://img.shields.io/badge/package-ESM--only-ffe536.svg
+[package-url]: https://nodejs.org/api/esm.html
 
 [npm]: https://img.shields.io/npm/v/ua-regexes-lite.svg
 [npm-url]: https://www.npmjs.com/package/ua-regexes-lite
@@ -10,7 +15,10 @@
 [node]: https://img.shields.io/node/v/ua-regexes-lite.svg
 [node-url]: https://nodejs.org
 
-[build]: https://img.shields.io/github/workflow/status/TrigenSoftware/ua-regexes-lite/CI.svg
+[size]: https://packagephobia.com/badge?p=ua-regexes-lite
+[size-url]: https://packagephobia.com/result?p=ua-regexes-lite
+
+[build]: https://img.shields.io/github/actions/workflow/status/TrigenSoftware/ua-regexes-lite/tests.yml?branch=main
 [build-url]: https://github.com/TrigenSoftware/ua-regexes-lite/actions
 
 A lite useragent regexes collection.
@@ -18,10 +26,10 @@ A lite useragent regexes collection.
 ## Install
 
 ```bash
-# yarn
-yarn add ua-regexes-lite
 # pnpm
 pnpm add ua-regexes-lite
+# yarn
+yarn add ua-regexes-lite
 # npm
 npm i ua-regexes-lite
 ```
