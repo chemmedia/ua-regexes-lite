@@ -1,9 +1,13 @@
 {
   "name": "ua-regexes-lite",
-  "version": "1.1.2",
+  "version": "1.2.1",
   "description": "A lite useragent regexes collection.",
   "author": "dangreen",
   "license": "MIT",
+  "funding": [
+    "https://opencollective.com/browserslist-useragent-regexp",
+    "https://ko-fi.com/dangreen"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/TrigenSoftware/ua-regexes-lite.git"
@@ -19,8 +23,10 @@
   "engines": {
     "node": ">=14"
   },
-  "types": "./index.d.ts",
-  "main": "./index.js",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./index.js"
+  },
   "publishConfig": {
     "directory": "package"
   },
@@ -42,17 +48,15 @@
     "updateGitHooks": "simple-git-hooks"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3",
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
-    "@commitlint/cz-commitlint": "^17.1.2",
-    "@trigen/eslint-config": "8.0.0-alpha.14",
-    "@trigen/scripts": "8.0.0-alpha.9",
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@commitlint/cz-commitlint": "^18.0.0",
+    "@trigen/eslint-config": "8.0.0-alpha.29",
+    "@trigen/scripts": "8.0.0-alpha.29",
     "clean-publish": "^4.0.1",
     "commitizen": "^4.2.5",
     "del-cli": "^5.0.0",
     "eslint": "^8.25.0",
-    "inquirer": "^8.0.0",
     "nano-staged": "^0.8.0",
     "simple-git-hooks": "^2.8.0",
     "simple-github-release": "^1.0.0",

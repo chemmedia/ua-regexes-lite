@@ -4,24 +4,24 @@
 
 /** @type {UserAgentRegex[]} */
 const regexes = [
+  {
+    regex: /IE (\d+)\.(\d+)/,
+    family: 'ie',
+    maxVersion: [
+      7,
+      Infinity,
+      Infinity
+    ]
+  },
   /**
    * IE can be in Compatability Mode (IE 7.0)
    * so we need to check Trident version
    */
   {
-    regex: /Trident\/[78]\.0/,
+    regex: /Trident\/4\.0/,
     family: 'ie',
     version: [
-      11,
-      0,
-      0
-    ]
-  },
-  {
-    regex: /Trident\/6\.0/,
-    family: 'ie',
-    version: [
-      10,
+      8,
       0,
       0
     ]
@@ -36,25 +36,25 @@ const regexes = [
     ]
   },
   {
-    regex: /Trident\/4\.0/,
+    regex: /Trident\/6\.0/,
     family: 'ie',
     version: [
-      8,
+      10,
       0,
       0
     ]
   },
   {
-    regex: /IE (\d+)\.(\d+)/,
+    regex: /Trident\/[78]\.0/,
     family: 'ie',
-    maxVersion: [
-      7,
-      Infinity,
-      Infinity
+    version: [
+      11,
+      0,
+      0
     ]
   },
   {
-    regex: /Edge?\/(\d+)(\.(\d+)|)(\.(\d+)|)/,
+    regex: /Edge?\/(\d+)\.(\d+)(\.(\d+)|)/,
     family: 'edge'
   },
   {
@@ -79,9 +79,11 @@ const regexes = [
   },
   /**
    * Safari on iPad have desktop-like useragent
+   * Some versions contains letter subversions
+   * GNOME Web (X11) is based on WebKit and should be detected as Safari
    */
   {
-    regex: /Maci.* Version\/(\d+)\.(\d+)([.,](\d+)|)( Mobile\/\w+|) Safari\//,
+    regex: /(Maci|X11).+ Version\/(\d+)\.(\d+)([.,](\d+)|)( \(\w+\)|)( Mobile\/\w+|) Safari\//,
     family: 'safari'
   },
   /**
@@ -174,14 +176,14 @@ const regexes = [
     ]
   },
   {
-    regex: /Android:?[ \-/](\d+)(\.(\d+)|)(\.(\d+)|)/,
+    regex: /Android:?[ /-](\d+)(\.(\d+)|)(\.(\d+)|)/,
     family: 'android'
   },
   /**
    * Ignore IE Mobile 11
    */
   {
-    regex: /Android:?[ \-/](\d+)(\.(\d+)|)(\.(\d+)|);(?! ARM; Trident)/,
+    regex: /Android:?[ /-](\d+)(\.(\d+)|)(\.(\d+)|);(?! ARM; Trident)/,
     family: 'android',
     version: [
       4,
